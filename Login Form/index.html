@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      width: 300px;
+      height: 230px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background: rgb(238,174,202);
+      background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      width: 300px;
+      margin-top: 20px;
+      
+    }
+    button:hover{
+        background-color:green;
+    }
+    #username{
+      border-radius: 20px;
+    }
+    #password{
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<form id="loginForm">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" required>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required>
+
+  <button type="button" onclick="validateLogin()">Login</button>
+</form>
+
+<script>
+  function validateLogin() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Add your authentication logic here
+    // For a simple example, let's check if both fields are non-empty
+    if (username && password) {
+      alert('Login successful!');
+    } else {
+      alert('Please enter both username and password.');
+    }
+  }
+</script>
+
+</body>
+</html>
